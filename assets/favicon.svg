@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Black Diamond Detailing">
+  <defs>
+    <linearGradient id="d" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#d9dde6"/>
+      <stop offset="1" stop-color="#878fa1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0b0c0f"/>
+  <g transform="translate(32,30)" stroke="#0b0c0f" stroke-width="1.1" stroke-linejoin="round">
+    <!-- crown -->
+    <polygon points="-17,-8 -8,-8 -12.5,0" fill="#eceef3"/>
+    <polygon points="-8,-8 0,-8 -3,0" fill="#c2c8d4"/>
+    <polygon points="0,-8 8,-8 3,0" fill="#eceef3"/>
+    <polygon points="8,-8 17,-8 12.5,0" fill="#a6adbd"/>
+    <!-- girdle -->
+    <polygon points="-17,-8 17,-8 12.5,0 -12.5,0" fill="url(#d)" opacity="0.25"/>
+    <!-- pavilion -->
+    <polygon points="-12.5,0 12.5,0 0,20" fill="url(#d)"/>
+    <polygon points="-12.5,0 -3,0 0,20" fill="#c2c8d4" opacity="0.55"/>
+    <polygon points="12.5,0 3,0 0,20" fill="#878fa1" opacity="0.55"/>
+  </g>
+</svg>
