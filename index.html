@@ -24,6 +24,26 @@
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 
+  <!-- Mobile responsiveness fixes (custom CSS; the compiled Tailwind build can't add new utilities) -->
+  <style>
+    /* #about / #contact use `grid lg:grid-cols-2` with no base grid-cols-1. Below lg, that's an
+       implicit auto-width column that grows to max-content — the long, non-wrapping email address
+       overflowed the 375px container. Constrain the single mobile/tablet column to the container
+       width so flex children can shrink and the email can truncate as designed. */
+    @media (max-width: 1023.98px) {
+      #about > .container-x,
+      #contact > .container-x {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    /* Comfortable tap target for the secondary "Get directions" link on touch. */
+    @media (max-width: 767.98px) {
+      #contact a[href*="maps/dir"] {
+        min-height: 44px;
+      }
+    }
+  </style>
+
   <!--
     ============================================================================
     BUILD NOTE — content integrity
